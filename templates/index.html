@@ -1,0 +1,29 @@
+<h1>Hello World</h1>
+<p>This is my web page </p>
+
+<p>My name is {{first_name}}</p>
+<br>
+<p>{{stuff }}</p>
+<p>{{stuff | safe}}</p> <!--safe tells the jinja that it is trusted code and safe to output as it is. -->
+
+<br>
+<p>{{stuff}}</p>
+<p>{{stuff | striptags}}</p>   <!--It will strip any HTML tags completely out. i.e. unlike 'safe' it will completely 
+                                    remove the html tag rather than just ignoring it.-->
+<br>
+<p>{{thing}}</p>
+<p>{{thing | title}}</p>  <!-- It will capitalize every word in it. -->
+<br>
+
+
+<h3>Favourite Food:</h3>
+{% for food in dishes%}
+    {% if food == 44 %}
+        {{food + 100}}<br>
+    {% else %}
+        {{food}}<br>
+    {% endif %}
+{% endfor %}
+<br>
+{{dishes.1}}
+<br>
